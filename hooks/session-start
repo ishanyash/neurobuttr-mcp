@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# SessionStart hook: reads the using-neurobuttr meta-skill and injects it as context
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PLUGIN_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+SKILL_FILE="$PLUGIN_ROOT/skills/using-neurobuttr/SKILL.md"
+
+if [ ! -f "$SKILL_FILE" ]; then
+  echo '{"hookSpecificOutput":{}}' >&2
+  exit 0
+fi
+
+SKILL_CONTENT=$(cat "$SKILL_FILE")
+
+# JSON-escape the content
+ESCAPED=$(printf '%s' "$SKILL_CONTENT" | python3 -c 'import sys,json; print(json.dumps(sys.stdin.read()))' 2>/dev/null || printf '%s' "$SKILL_CONTENT" | node -e 'let d="";process.stdin.on("data",c=>d+=c);process.stdin.on("end",()=>console.log(JSON.stringify(d)))' 2>/dev/null)
+
+CONTEXT="<IMPORTANT>You have the neurobuttr plugin installed. Use the following skill guide to know WHEN and HOW to use neurobuttr MCP tools:\n\n${SKILL_CONTENT}\n</IMPORTANT>"
+
+# Re-escape the full context for JSON output
+ESCAPED_CONTEXT=$(printf '%s' "$CONTEXT" | python3 -c 'import sys,json; print(json.dumps(sys.stdin.read()))' 2>/dev/null || printf '%s' "$CONTEXT" | node -e 'let d="";process.stdin.on("data",c=>d+=c);process.stdin.on("end",()=>console.log(JSON.stringify(d)))' 2>/dev/null)
+
+# Emit for Claude Code
+cat <<EOF
+{
+  "hookSpecificOutput": {
+    "additionalContext": ${ESCAPED_CONTEXT}
+  }
+}
+EOF
