@@ -5,3 +5,9 @@ tsconfig.json
 node_modules
 *.ts
 !dist/**/*.d.ts
+.claude-plugin/
+skills/
+hooks/
+agents/
+commands/
+docs/
