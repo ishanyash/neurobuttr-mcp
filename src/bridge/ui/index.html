@@ -901,7 +901,7 @@
       left += '<div class="detail-label">Time</div><div class="detail-content">' + formatTime(msg.timestamp) + '</div>';
       left += '<div class="detail-label">Approval</div><div class="detail-content">' + (msg.requiresApproval ? '<span style="color:var(--yellow)">Required</span>' : '<span style="color:var(--text-faint)">Auto-approved</span>') + '</div>';
       if (msg.eventKey) {
-        left += '<div class="detail-label">Event Key</div><div class="detail-content"><code style="background:var(--surface-alt);padding:2px 6px;border-radius:3px;font-size:12px;color:var(--green);cursor:pointer;user-select:all" onclick="navigator.clipboard.writeText(\'nb:' + msg.eventKey + '\');this.style.color=\'var(--yellow)\';setTimeout(()=>this.style.color=\'var(--green)\',800)" title="Click to copy">nb:' + msg.eventKey + '</code></div>';
+        left += '<div class="detail-label">Event Key</div><div class="detail-content" style="display:flex;align-items:center;gap:6px"><code style="background:var(--surface-alt);padding:2px 6px;border-radius:3px;font-size:12px;color:var(--green);user-select:all">nb:' + msg.eventKey + '</code><button class="copy-btn" style="position:static;padding:2px 6px;font-size:11px" onclick="navigator.clipboard.writeText(\'nb:' + msg.eventKey + '\');this.textContent=\'Copied!\';setTimeout(()=>this.textContent=\'Copy\',800)">Copy</button></div>';
       }
       if (branch) {
         left += '<div class="detail-label">Branch</div><div class="detail-content" style="color:var(--blue)">' + esc(branch.name) + '</div>';
