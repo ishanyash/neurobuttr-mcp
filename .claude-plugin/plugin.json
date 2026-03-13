@@ -1,0 +1,10 @@
+{
+  "name": "neurobuttr",
+  "description": "Conversation branching, mapping & timeline skills for Claude Code",
+  "version": "0.2.0",
+  "author": { "name": "Ishan Yash" },
+  "homepage": "https://github.com/ishanyash/neurobuttr-mcp",
+  "repository": "https://github.com/ishanyash/neurobuttr-mcp",
+  "license": "MIT",
+  "keywords": ["branching", "conversation", "timeline", "mapping", "mcp"]
+}
