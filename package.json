@@ -1,0 +1,40 @@
+{
+  "name": "neurobuttr-mcp",
+  "version": "0.2.0",
+  "description": "Conversation branching, relationship mapping & timeline for Claude Code",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "neurobuttr-mcp": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "postbuild": "chmod +x dist/cli.js && mkdir -p dist/timeline/ui && cp src/timeline/ui/index.html dist/timeline/ui/ && mkdir -p dist/bridge/ui && cp src/bridge/ui/index.html dist/bridge/ui/",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "ws": "^8.19.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/ws": "^8.18.1",
+    "typescript": "^5.7.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "mcp",
+    "claude-code",
+    "conversation-branching",
+    "neurobuttr",
+    "relationship-map"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ishanyash/neurobuttr-mcp.git"
+  }
+}

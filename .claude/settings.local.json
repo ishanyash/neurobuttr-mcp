@@ -1,0 +1,46 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__neurobuttr__add_message",
+      "mcp__neurobuttr__create_branch",
+      "mcp__neurobuttr__get_relationship_map",
+      "mcp__neurobuttr__remember_insight",
+      "Bash(npm run build)",
+      "Read(//private/tmp/**)",
+      "Bash(node /Users/ishanyash/Documents/personal_gh/neurobuttr-mcp/dist/cli.js help)",
+      "Bash(xargs cat)",
+      "mcp__neurobuttr__nb_branch",
+      "mcp__neurobuttr__nb_timeline_capture",
+      "mcp__neurobuttr__nb_timeline_list",
+      "mcp__neurobuttr__nb_timeline_show",
+      "mcp__neurobuttr__nb_timeline_diff",
+      "mcp__neurobuttr__nb_timeline_annotate",
+      "mcp__neurobuttr__nb_timeline_rollback",
+      "mcp__neurobuttr__nb_timeline_replay",
+      "Read(//Users/ishanyash/.claude/**)",
+      "Bash(ls -la ~/.claude/projects/-Users-ishanyash-Documents-personal-gh-neurobuttr-mcp/*.jsonl)",
+      "Bash(python3 -m json.tool --no-ensure-ascii)",
+      "Bash(python3:*)",
+      "Read(//Users/ishanyash/.neurobuttr/timeline/neurobuttr-mcp-4d054e53ef96/**)",
+      "Bash(/Users/ishanyash/.claude/plugins/cache/superpowers-dev/superpowers/5.0.2/skills/brainstorming/scripts/start-server.sh --project-dir /Users/ishanyash/Documents/personal_gh/neurobuttr-mcp)",
+      "Bash(jq 'select\\(.agentId != null and .type == \"\"user\"\"\\) | {type: .type, agentId: .agentId, hasToolUseResult: \\(.toolUseResult != null\\), timestamp: .timestamp}' ~/.claude/projects/-Users-ishanyash-Documents-personal-gh-neurobuttr-mcp/885b249c-a3e5-4d10-a38f-da2aaf32ae2d.jsonl)",
+      "Bash(jq 'select\\(.type == \"\"user\"\" and .message.content[]?.type == \"\"agent_result\"\"\\) | {uuid: .uuid, timestamp: .timestamp, hasAgentResult: true}' ~/.claude/projects/-Users-ishanyash-Documents-personal-gh-neurobuttr-mcp/885b249c-a3e5-4d10-a38f-da2aaf32ae2d.jsonl)",
+      "Bash(jq -r 'select\\(.type == \"\"user\"\" and .message.content != null\\) | .message.content[0].type' ~/.claude/projects/-Users-ishanyash-Documents-personal-gh-neurobuttr-mcp/885b249c-a3e5-4d10-a38f-da2aaf32ae2d.jsonl)",
+      "Bash(jq 'select\\(.type == \"\"user\"\"\\) | .message.content[0] | type' ~/.claude/projects/-Users-ishanyash-Documents-personal-gh-neurobuttr-mcp/885b249c-a3e5-4d10-a38f-da2aaf32ae2d.jsonl)"
+    ],
+    "additionalDirectories": [
+      "/Users/ishanyash/Documents/personal_gh/neurobuttr-mcp/docs/superpowers"
+    ]
+  },
+  "enabledPlugins": {
+    "superpowers@superpowers-dev": true
+  },
+  "mcpServers": {
+    "neurobuttr": {
+      "command": "node",
+      "args": [
+        "/Users/ishanyash/Documents/personal_gh/neurobuttr-mcp/dist/index.js"
+      ]
+    }
+  }
+}

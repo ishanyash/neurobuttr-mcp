@@ -1,0 +1,132 @@
+<h2>Station Design System v2</h2>
+<p class="subtitle">Shape = action type (all equilateral). Color = who did it.</p>
+
+<div style="display:flex;gap:32px;margin:24px 0;flex-wrap:wrap;">
+
+  <!-- User column -->
+  <div style="flex:1;min-width:280px;">
+    <div style="font-size:0.75em;text-transform:uppercase;letter-spacing:0.5px;color:#6e7681;margin-bottom:16px;display:flex;align-items:center;gap:6px;">
+      <span style="width:10px;height:10px;border-radius:50%;background:#e6edf3;display:inline-block;border:1.5px solid #e6edf3;"></span>
+      User — Warm palette
+    </div>
+
+    <svg width="300" height="180" viewBox="0 0 300 180">
+      <!-- Prompt — circle, warm white -->
+      <circle cx="30" cy="28" r="10" fill="#0a0e14" stroke="#e6edf3" stroke-width="2.5"/>
+      <text x="55" y="25" fill="#e6edf3" font-size="12" font-family="system-ui" font-weight="500">Prompt</text>
+      <text x="55" y="40" fill="#6e7681" font-size="10" font-family="system-ui">Your message to Claude</text>
+
+      <!-- Decision — diamond, warm gold -->
+      <rect x="22" y="78" width="14" height="14" rx="1" transform="rotate(45 29 85)" fill="#0a0e14" stroke="#d4a72c" stroke-width="2.5"/>
+      <text x="55" y="82" fill="#d4a72c" font-size="12" font-family="system-ui" font-weight="500">Decision</text>
+      <text x="55" y="97" fill="#6e7681" font-size="10" font-family="system-ui">Branch, checkout, resolve</text>
+
+      <!-- Insight — diamond filled, amber -->
+      <rect x="22" y="138" width="14" height="14" rx="1" transform="rotate(45 29 145)" fill="#f0883e" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="55" y="142" fill="#f0883e" font-size="12" font-family="system-ui" font-weight="500">Insight</text>
+      <text x="55" y="157" fill="#6e7681" font-size="10" font-family="system-ui">Saved finding from a branch</text>
+    </svg>
+  </div>
+
+  <!-- Agent column -->
+  <div style="flex:1;min-width:280px;">
+    <div style="font-size:0.75em;text-transform:uppercase;letter-spacing:0.5px;color:#6e7681;margin-bottom:16px;display:flex;align-items:center;gap:6px;">
+      <span style="width:10px;height:10px;border-radius:50%;background:#79c0ff;display:inline-block;border:1.5px solid #79c0ff;"></span>
+      Agent — Cool palette (each tool gets its own color)
+    </div>
+
+    <svg width="300" height="240" viewBox="0 0 300 240">
+      <!-- Edit — circle, green -->
+      <circle cx="30" cy="28" r="10" fill="#0a0e14" stroke="#3fb950" stroke-width="2.5"/>
+      <text x="55" y="25" fill="#3fb950" font-size="12" font-family="system-ui" font-weight="500">Edit / Write</text>
+      <text x="55" y="40" fill="#6e7681" font-size="10" font-family="system-ui">File modification</text>
+
+      <!-- Bash — square, orange-red -->
+      <rect x="20" y="75" width="20" height="20" rx="3" fill="#0a0e14" stroke="#f47067" stroke-width="2.5"/>
+      <text x="55" y="82" fill="#f47067" font-size="12" font-family="system-ui" font-weight="500">Bash</text>
+      <text x="55" y="97" fill="#6e7681" font-size="10" font-family="system-ui">Command execution</text>
+
+      <!-- Search — triangle (equilateral), cyan -->
+      <polygon points="30,120 18,140.8 42,140.8" fill="#0a0e14" stroke="#79c0ff" stroke-width="2.5" stroke-linejoin="round"/>
+      <text x="55" y="130" fill="#79c0ff" font-size="12" font-family="system-ui" font-weight="500">Grep / Glob</text>
+      <text x="55" y="145" fill="#6e7681" font-size="10" font-family="system-ui">Search / file lookup</text>
+
+      <!-- Read — circle (smaller, dotted), slate blue -->
+      <circle cx="30" cy="188" r="10" fill="#0a0e14" stroke="#8b949e" stroke-width="2" stroke-dasharray="4 3"/>
+      <text x="55" y="185" fill="#8b949e" font-size="12" font-family="system-ui" font-weight="500">Read</text>
+      <text x="55" y="200" fill="#6e7681" font-size="10" font-family="system-ui">File read (dashed = no change)</text>
+    </svg>
+  </div>
+</div>
+
+<!-- Color rationale -->
+<div style="background:#0d1117;border:1px solid #1b2028;border-radius:8px;padding:16px;margin:16px 0;">
+  <div style="font-size:0.75em;text-transform:uppercase;letter-spacing:0.5px;color:#6e7681;margin-bottom:8px;">Design rationale</div>
+  <div style="font-size:0.82em;color:#8b949e;line-height:1.6;">
+    <strong style="color:#c9d1d9;">Warm vs Cool</strong> — User actions use warm tones (white, gold, amber). Agent actions use cool tones (green, red, cyan). This creates an instinctive <em>who</em> distinction without dimming either side.<br/>
+    <strong style="color:#c9d1d9;">Semantic colors</strong> — Green for edits (changes), red for bash (execution risk), cyan for search (exploration), gray-dashed for reads (passive). Colors match developer intuition.<br/>
+    <strong style="color:#c9d1d9;">Equal weight</strong> — All stations are the same size. Nothing is muted. Every action matters.
+  </div>
+</div>
+
+<!-- Example line -->
+<div style="margin-top:20px;">
+  <div style="font-size:0.75em;text-transform:uppercase;letter-spacing:0.5px;color:#6e7681;margin-bottom:12px;">
+    Example conversation flow
+  </div>
+  <div style="background:#0a0e14;border-radius:8px;padding:28px 20px;border:1px solid #1b2028;">
+    <svg width="100%" height="90" viewBox="0 0 760 90" preserveAspectRatio="xMidYMid meet">
+      <!-- Main line -->
+      <line x1="20" y1="45" x2="740" y2="45" stroke="#58a6ff" stroke-width="3" opacity="0.5"/>
+
+      <!-- 1. User prompt (warm white circle) -->
+      <circle cx="40" cy="45" r="10" fill="#0a0e14" stroke="#e6edf3" stroke-width="2.5"/>
+      <text x="40" y="72" text-anchor="middle" fill="#e6edf3" font-size="8" font-family="system-ui">prompt</text>
+
+      <!-- 2. Agent reads (dashed circles) -->
+      <circle cx="100" cy="45" r="10" fill="#0a0e14" stroke="#8b949e" stroke-width="2" stroke-dasharray="4 3"/>
+      <circle cx="150" cy="45" r="10" fill="#0a0e14" stroke="#8b949e" stroke-width="2" stroke-dasharray="4 3"/>
+
+      <!-- 3. Agent search (cyan triangle) -->
+      <polygon points="210,35 198,55.8 222,55.8" fill="#0a0e14" stroke="#79c0ff" stroke-width="2.5" stroke-linejoin="round"/>
+      <text x="210" y="72" text-anchor="middle" fill="#79c0ff" font-size="7" font-family="system-ui">Grep</text>
+
+      <!-- 4. Agent edits (green circles) -->
+      <circle cx="280" cy="45" r="10" fill="#0a0e14" stroke="#3fb950" stroke-width="2.5"/>
+      <text x="280" y="72" text-anchor="middle" fill="#3fb950" font-size="7" font-family="system-ui">Edit</text>
+
+      <circle cx="340" cy="45" r="10" fill="#0a0e14" stroke="#3fb950" stroke-width="2.5"/>
+
+      <!-- 5. Agent bash (red square) -->
+      <rect x="390" y="35" width="20" height="20" rx="3" fill="#0a0e14" stroke="#f47067" stroke-width="2.5"/>
+      <text x="400" y="72" text-anchor="middle" fill="#f47067" font-size="7" font-family="system-ui">npm test</text>
+
+      <!-- 6. User prompt (warm white circle) -->
+      <circle cx="480" cy="45" r="10" fill="#0a0e14" stroke="#e6edf3" stroke-width="2.5"/>
+      <text x="480" y="72" text-anchor="middle" fill="#e6edf3" font-size="8" font-family="system-ui">prompt</text>
+
+      <!-- 7. User branches (gold diamond) -->
+      <rect x="535" y="37" width="14" height="14" rx="1" transform="rotate(45 542 44)" fill="#0a0e14" stroke="#d4a72c" stroke-width="2.5"/>
+      <text x="542" y="72" text-anchor="middle" fill="#d4a72c" font-size="7" font-family="system-ui">branch</text>
+
+      <!-- 8. Agent edit (green circle) -->
+      <circle cx="610" cy="45" r="10" fill="#0a0e14" stroke="#3fb950" stroke-width="2.5"/>
+
+      <!-- 9. Agent search (cyan triangle) -->
+      <polygon points="670,35 658,55.8 682,55.8" fill="#0a0e14" stroke="#79c0ff" stroke-width="2.5" stroke-linejoin="round"/>
+
+      <!-- 10. Insight (filled amber diamond) -->
+      <rect x="722" y="37" width="14" height="14" rx="1" transform="rotate(45 729 44)" fill="#f0883e" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="729" y="72" text-anchor="middle" fill="#f0883e" font-size="7" font-family="system-ui">insight</text>
+    </svg>
+  </div>
+  <div style="font-size:0.78em;color:#8b949e;margin-top:10px;line-height:1.5;">
+    <span style="color:#e6edf3;">&#9679;</span> Warm = you &nbsp;&nbsp;
+    <span style="color:#3fb950;">&#9679;</span> Edit &nbsp;&nbsp;
+    <span style="color:#f47067;">&#9632;</span> Bash &nbsp;&nbsp;
+    <span style="color:#79c0ff;">&#9650;</span> Search &nbsp;&nbsp;
+    <span style="color:#8b949e;">&#9675;</span> Read &nbsp;&nbsp;
+    <span style="color:#d4a72c;">&#9670;</span> Decision &nbsp;&nbsp;
+    <span style="color:#f0883e;">&#9670;</span> Insight
+  </div>
+</div>

@@ -1,0 +1,123 @@
+<h2>How should the relationship map feel?</h2>
+<p class="subtitle">This is the core visual — the thing you stare at while working. Pick the vibe.</p>
+
+<div class="cards">
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0d1117;padding:24px;min-height:220px;display:flex;align-items:center;justify-content:center;">
+      <!-- Node graph style -->
+      <svg width="320" height="180" viewBox="0 0 320 180">
+        <!-- Edges -->
+        <line x1="60" y1="90" x2="160" y2="50" stroke="#30363d" stroke-width="2"/>
+        <line x1="60" y1="90" x2="160" y2="130" stroke="#30363d" stroke-width="2"/>
+        <line x1="160" y1="50" x2="270" y2="30" stroke="#30363d" stroke-width="2"/>
+        <line x1="160" y1="50" x2="270" y2="70" stroke="#238636" stroke-width="2" stroke-dasharray="4"/>
+        <line x1="160" y1="130" x2="270" y2="130" stroke="#30363d" stroke-width="2"/>
+        <!-- Main node -->
+        <circle cx="60" cy="90" r="18" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+        <text x="60" y="94" text-anchor="middle" fill="#f0f6fc" font-size="10" font-family="system-ui">main</text>
+        <!-- Branch nodes -->
+        <circle cx="160" cy="50" r="16" fill="#161b22" stroke="#d2a8ff" stroke-width="2"/>
+        <text x="160" y="54" text-anchor="middle" fill="#d2a8ff" font-size="9" font-family="system-ui">auth</text>
+        <circle cx="160" cy="130" r="16" fill="#161b22" stroke="#f0883e" stroke-width="2"/>
+        <text x="160" y="134" text-anchor="middle" fill="#f0883e" font-size="9" font-family="system-ui">perf</text>
+        <!-- Leaf nodes -->
+        <circle cx="270" cy="30" r="14" fill="#161b22" stroke="#d2a8ff" stroke-width="1.5"/>
+        <text x="270" y="34" text-anchor="middle" fill="#8b949e" font-size="8" font-family="system-ui">JWT</text>
+        <circle cx="270" cy="70" r="14" fill="#1b4332" stroke="#238636" stroke-width="1.5"/>
+        <text x="270" y="74" text-anchor="middle" fill="#3fb950" font-size="7" font-family="system-ui">merged</text>
+        <circle cx="270" cy="130" r="14" fill="#161b22" stroke="#f0883e" stroke-width="1.5"/>
+        <text x="270" y="134" text-anchor="middle" fill="#8b949e" font-size="8" font-family="system-ui">cache</text>
+        <!-- Current indicator -->
+        <circle cx="270" cy="30" r="20" fill="none" stroke="#58a6ff" stroke-width="1" stroke-dasharray="3" opacity="0.6"/>
+      </svg>
+    </div>
+    <div class="card-body">
+      <h3>A: Node Graph</h3>
+      <p>Force-directed graph like a mind map. Nodes float freely, connected by edges. Organic, spatial. Think: Obsidian graph view.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0d1117;padding:24px;min-height:220px;display:flex;align-items:center;justify-content:center;">
+      <!-- Git tree style -->
+      <svg width="320" height="180" viewBox="0 0 320 180">
+        <!-- Main line -->
+        <line x1="40" y1="20" x2="40" y2="160" stroke="#58a6ff" stroke-width="3"/>
+        <!-- Branch lines -->
+        <line x1="40" y1="50" x2="130" y2="50" stroke="#d2a8ff" stroke-width="2"/>
+        <line x1="130" y1="50" x2="130" y2="90" stroke="#d2a8ff" stroke-width="2"/>
+        <line x1="130" y1="70" x2="200" y2="70" stroke="#d2a8ff" stroke-width="1.5" stroke-dasharray="3"/>
+        <!-- Merge back -->
+        <line x1="130" y1="90" x2="40" y2="110" stroke="#238636" stroke-width="2" stroke-dasharray="4"/>
+        <!-- Second branch -->
+        <line x1="40" y1="130" x2="130" y2="130" stroke="#f0883e" stroke-width="2"/>
+        <line x1="130" y1="130" x2="130" y2="160" stroke="#f0883e" stroke-width="2"/>
+        <!-- Dots on main -->
+        <circle cx="40" cy="20" r="5" fill="#58a6ff"/>
+        <circle cx="40" cy="50" r="5" fill="#58a6ff"/>
+        <circle cx="40" cy="110" r="6" fill="#238636"/>
+        <circle cx="40" cy="130" r="5" fill="#58a6ff"/>
+        <circle cx="40" cy="160" r="5" fill="#58a6ff"/>
+        <!-- Branch dots -->
+        <circle cx="130" cy="50" r="4" fill="#d2a8ff"/>
+        <circle cx="130" cy="70" r="4" fill="#d2a8ff"/>
+        <circle cx="130" cy="90" r="4" fill="#d2a8ff"/>
+        <circle cx="200" cy="70" r="3" fill="#8b949e"/>
+        <circle cx="130" cy="130" r="4" fill="#f0883e"/>
+        <circle cx="130" cy="160" r="5" fill="#f0883e" stroke="#58a6ff" stroke-width="2"/>
+        <!-- Labels -->
+        <text x="55" y="24" fill="#8b949e" font-size="9" font-family="monospace">initial setup</text>
+        <text x="55" y="54" fill="#8b949e" font-size="9" font-family="monospace">add auth flow</text>
+        <text x="145" y="54" fill="#d2a8ff" font-size="9" font-family="monospace">explore JWT</text>
+        <text x="145" y="94" fill="#238636" font-size="9" font-family="monospace">merged ✓</text>
+        <text x="145" y="134" fill="#f0883e" font-size="9" font-family="monospace">perf tuning</text>
+        <text x="145" y="164" fill="#58a6ff" font-size="9" font-family="monospace">← you are here</text>
+      </svg>
+    </div>
+    <div class="card-body">
+      <h3>B: Git Graph</h3>
+      <p>Vertical timeline with branches forking off and merging back. Linear, familiar to developers. Think: GitLens, git log --graph.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0d1117;padding:24px;min-height:220px;display:flex;align-items:center;justify-content:center;">
+      <!-- Subway/metro style -->
+      <svg width="320" height="180" viewBox="0 0 320 180">
+        <!-- Main line (horizontal) -->
+        <path d="M 20 90 H 300" stroke="#58a6ff" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <!-- Branch up -->
+        <path d="M 100 90 C 100 90 110 50 140 50 H 220 C 240 50 240 90 240 90" stroke="#d2a8ff" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <!-- Branch down -->
+        <path d="M 180 90 C 180 90 190 140 210 140 H 280" stroke="#f0883e" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <!-- Sub-branch -->
+        <path d="M 170 50 C 170 50 175 25 195 25 H 230" stroke="#d2a8ff" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+        <!-- Station dots on main -->
+        <circle cx="40" cy="90" r="6" fill="#0d1117" stroke="#58a6ff" stroke-width="2.5"/>
+        <circle cx="100" cy="90" r="6" fill="#0d1117" stroke="#58a6ff" stroke-width="2.5"/>
+        <circle cx="180" cy="90" r="6" fill="#0d1117" stroke="#58a6ff" stroke-width="2.5"/>
+        <circle cx="240" cy="90" r="7" fill="#238636" stroke="#3fb950" stroke-width="2"/>
+        <circle cx="300" cy="90" r="6" fill="#0d1117" stroke="#58a6ff" stroke-width="2.5"/>
+        <!-- Branch stations -->
+        <circle cx="140" cy="50" r="5" fill="#0d1117" stroke="#d2a8ff" stroke-width="2"/>
+        <circle cx="180" cy="50" r="5" fill="#0d1117" stroke="#d2a8ff" stroke-width="2"/>
+        <circle cx="220" cy="50" r="5" fill="#0d1117" stroke="#d2a8ff" stroke-width="2"/>
+        <circle cx="195" cy="25" r="4" fill="#0d1117" stroke="#d2a8ff" stroke-width="1.5"/>
+        <circle cx="230" cy="25" r="4" fill="#0d1117" stroke="#d2a8ff" stroke-width="1.5"/>
+        <!-- Active branch -->
+        <circle cx="210" cy="140" r="5" fill="#0d1117" stroke="#f0883e" stroke-width="2"/>
+        <circle cx="250" cy="140" r="5" fill="#0d1117" stroke="#f0883e" stroke-width="2"/>
+        <circle cx="280" cy="140" r="7" fill="#f0883e" stroke="#fff" stroke-width="1.5"/>
+        <!-- Labels -->
+        <text x="40" y="108" text-anchor="middle" fill="#8b949e" font-size="7" font-family="system-ui">start</text>
+        <text x="140" y="42" fill="#d2a8ff" font-size="8" font-family="system-ui">auth</text>
+        <text x="240" y="108" text-anchor="middle" fill="#3fb950" font-size="7" font-family="system-ui">merged</text>
+        <text x="280" y="158" text-anchor="middle" fill="#f0883e" font-size="8" font-family="system-ui">active ●</text>
+      </svg>
+    </div>
+    <div class="card-body">
+      <h3>C: Metro Map</h3>
+      <p>Horizontal flowing lines like a subway map. Branches curve off and rejoin. Clean, modern, distinctive. Think: London Tube map meets code.</p>
+    </div>
+  </div>
+</div>
