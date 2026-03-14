@@ -1,12 +1,14 @@
 <p align="center">
+  <img src="banner.svg" alt="neurobuttr-mcp banner" width="100%" />
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/npm/v/neurobuttr-mcp?style=flat-square&color=f59e0b" alt="npm version" />
   <img src="https://img.shields.io/npm/l/neurobuttr-mcp?style=flat-square&color=10b981" alt="license" />
   <img src="https://img.shields.io/badge/MCP-compatible-7c3aed?style=flat-square" alt="MCP compatible" />
   <img src="https://img.shields.io/badge/runtime-Node.js_18+-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js 18+" />
   <img src="https://img.shields.io/badge/TypeScript-5.7+-3178c6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
 </p>
-
-<h1 align="center">neurobuttr-mcp</h1>
 
 <p align="center">
   <strong>Git-like conversation branching, relationship mapping & session timeline for Claude Code.</strong>
