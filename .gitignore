@@ -28,3 +28,7 @@ Thumbs.db
 
 # Claude Code
 .claude/settings.local.json
+
+# Superpowers (local brainstorm/plan artifacts)
+.superpowers/
+docs/superpowers/
