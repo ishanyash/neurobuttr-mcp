@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 370" width="1280" height="370">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e14"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#58a6ff" stop-opacity="0.3"/>
+      <stop offset="70%" stop-color="#f0883e" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f0883e" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1280" height="370" fill="url(#bg)"/>
+  <!-- Branch line art — left (conversation branching motif) -->
+  <g stroke="#58a6ff" stroke-width="1" fill="none" opacity="0.15">
+    <path d="M0,185 L60,185 L80,145 L140,145"/>
+    <path d="M0,185 L60,185 L80,225 L140,225"/>
+    <path d="M80,145 L100,105 L160,105"/>
+    <path d="M80,225 L100,265 L160,265"/>
+    <circle cx="140" cy="145" r="3"/><circle cx="140" cy="225" r="3"/>
+    <circle cx="160" cy="105" r="2.5"/><circle cx="160" cy="265" r="2.5"/>
+    <circle cx="60" cy="185" r="3.5" fill="#58a6ff"/>
+  </g>
+  <g stroke="#f0883e" stroke-width="1" fill="none" opacity="0.12">
+    <path d="M0,185 L40,185 L55,160 L120,160 L135,140 L170,140"/>
+    <path d="M0,185 L40,185 L55,210 L120,210 L135,230 L170,230"/>
+    <circle cx="170" cy="140" r="2" fill="#f0883e"/><circle cx="170" cy="230" r="2" fill="#f0883e"/>
+  </g>
+  <!-- Branch line art — right (timeline/metro motif) -->
+  <g stroke="#58a6ff" stroke-width="1" fill="none" opacity="0.15">
+    <path d="M1280,185 L1220,185 L1200,145 L1140,145"/>
+    <path d="M1280,185 L1220,185 L1200,225 L1140,225"/>
+    <path d="M1200,145 L1180,105 L1120,105"/>
+    <path d="M1200,225 L1180,265 L1120,265"/>
+    <circle cx="1140" cy="145" r="3"/><circle cx="1140" cy="225" r="3"/>
+    <circle cx="1120" cy="105" r="2.5"/><circle cx="1120" cy="265" r="2.5"/>
+    <circle cx="1220" cy="185" r="3.5" fill="#58a6ff"/>
+  </g>
+  <g stroke="#f0883e" stroke-width="1" fill="none" opacity="0.12">
+    <path d="M1280,185 L1240,185 L1225,160 L1160,160 L1145,140 L1110,140"/>
+    <path d="M1280,185 L1240,185 L1225,210 L1160,210 L1145,230 L1110,230"/>
+    <circle cx="1110" cy="140" r="2" fill="#f0883e"/><circle cx="1110" cy="230" r="2" fill="#f0883e"/>
+  </g>
+  <!-- Terminal window -->
+  <g transform="translate(200, 16)">
+    <rect x="0" y="0" width="880" height="338" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    <!-- Title bar -->
+    <rect x="0" y="0" width="880" height="36" rx="10" fill="#161b22"/>
+    <rect x="0" y="26" width="880" height="10" fill="#161b22"/>
+    <circle cx="20" cy="18" r="6" fill="#ff5f57"/>
+    <circle cx="40" cy="18" r="6" fill="#febc2e"/>
+    <circle cx="60" cy="18" r="6" fill="#28c840"/>
+    <text x="440" y="22" text-anchor="middle" font-family="'SF Mono', 'Fira Code', Menlo, monospace" font-size="12" font-weight="500" fill="#8b949e">neurobuttr-mcp &#x2014; zsh</text>
+    <!-- Terminal content -->
+    <g transform="translate(28, 66)">
+      <!-- Prompt -->
+      <text font-family="'SF Mono', 'Fira Code', Menlo, monospace" font-size="13">
+        <tspan fill="#7ee787">~/my-project</tspan><tspan fill="#8b949e"> $ </tspan><tspan fill="#c9d1d9">npx neurobuttr-mcp init</tspan>
+      </text>
+      <text y="20" font-family="'SF Mono', 'Fira Code', Menlo, monospace" font-size="13">
+        <tspan fill="#7ee787">&#x2713;</tspan><tspan fill="#c9d1d9"> MCP server registered in ~/.claude.json</tspan>
+      </text>
+      <!-- ASCII block title — "NEUROBUTTR" ANSI Shadow style -->
+      <text font-family="'SF Mono', 'Fira Code', Menlo, monospace" font-size="7.5" xml:space="preserve">
+<tspan x="0" dy="40" fill="#e6edf3">███╗   ██╗███████╗██╗   ██╗██████╗  ██████╗ </tspan><tspan fill="#f0883e">██████╗ ██╗   ██╗████████╗████████╗██████╗ </tspan>
+<tspan x="0" dy="9" fill="#e6edf3">████╗  ██║██╔════╝██║   ██║██╔══██╗██╔═══██╗</tspan><tspan fill="#f0883e">██╔══██╗██║   ██║╚══██╔══╝╚══██╔══╝██╔══██╗</tspan>
+<tspan x="0" dy="9" fill="#e6edf3">██╔██╗ ██║█████╗  ██║   ██║██████╔╝██║   ██║</tspan><tspan fill="#f0883e">██████╔╝██║   ██║   ██║      ██║   ██████╔╝</tspan>
+<tspan x="0" dy="9" fill="#e6edf3">██║╚██╗██║██╔══╝  ██║   ██║██╔══██╗██║   ██║</tspan><tspan fill="#f0883e">██╔══██╗██║   ██║   ██║      ██║   ██╔══██╗</tspan>
+<tspan x="0" dy="9" fill="#e6edf3">██║ ╚████║███████╗╚██████╔╝██║  ██║╚██████╔╝</tspan><tspan fill="#f0883e">██████╔╝╚██████╔╝   ██║      ██║   ██║  ██║</tspan>
+<tspan x="0" dy="9" fill="#e6edf3">╚═╝  ╚═══╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ </tspan><tspan fill="#f0883e">╚═════╝  ╚═════╝    ╚═╝      ╚═╝   ╚═╝  ╚═╝</tspan>
+      </text>
+      <!-- Subtitle -->
+      <text y="118" font-family="'SF Mono', 'Fira Code', Menlo, monospace" font-size="13" fill="#8b949e">Git-like conversation branching &amp; session timeline for Claude Code.</text>
+      <!-- Tags -->
+      <text y="148" font-family="'SF Mono', 'Fira Code', Menlo, monospace" font-size="13" xml:space="preserve"><tspan fill="#58a6ff">[</tspan><tspan fill="#7ee787">&#x2713;</tspan><tspan fill="#c9d1d9"> BRANCHING</tspan><tspan fill="#58a6ff">]</tspan><tspan> </tspan><tspan fill="#58a6ff">[</tspan><tspan fill="#7ee787">&#x2713;</tspan><tspan fill="#c9d1d9"> TIMELINE</tspan><tspan fill="#58a6ff">]</tspan><tspan> </tspan><tspan fill="#58a6ff">[</tspan><tspan fill="#7ee787">&#x2713;</tspan><tspan fill="#c9d1d9"> INSIGHTS</tspan><tspan fill="#58a6ff">]</tspan><tspan> </tspan><tspan fill="#58a6ff">[</tspan><tspan fill="#7ee787">&#x2713;</tspan><tspan fill="#c9d1d9"> METRO MAP</tspan><tspan fill="#58a6ff">]</tspan></text>
+      <!-- Status output -->
+      <text y="178" font-family="'SF Mono', 'Fira Code', Menlo, monospace" font-size="13">
+        <tspan fill="#8b949e">Session loaded. 3 branches, 2 insights.</tspan>
+      </text>
+      <text y="200" font-family="'SF Mono', 'Fira Code', Menlo, monospace" font-size="13">
+        <tspan fill="#7ee787">&#x2713;</tspan><tspan fill="#c9d1d9"> On branch </tspan><tspan fill="#d2a8ff">main</tspan><tspan fill="#c9d1d9"> &#x2014; ready to explore.</tspan>
+      </text>
+      <!-- Animated command examples -->
+      <text y="228" font-family="'SF Mono', 'Fira Code', Menlo, monospace" font-size="13" opacity="0" xml:space="preserve"><tspan fill="#d2a8ff">&#x276F; </tspan><tspan fill="#58a6ff">/branch</tspan><tspan fill="#c9d1d9"> explore-redis-caching</tspan>
+        <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.02;0.18;0.2;1" dur="15s" repeatCount="indefinite"/>
+      </text>
+      <text y="228" font-family="'SF Mono', 'Fira Code', Menlo, monospace" font-size="13" opacity="0" xml:space="preserve"><tspan fill="#d2a8ff">&#x276F; </tspan><tspan fill="#58a6ff">/map</tspan><tspan fill="#c9d1d9"> Show me the conversation tree</tspan>
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2;0.22;0.38;0.4;1" dur="15s" repeatCount="indefinite"/>
+      </text>
+      <text y="228" font-family="'SF Mono', 'Fira Code', Menlo, monospace" font-size="13" opacity="0" xml:space="preserve"><tspan fill="#d2a8ff">&#x276F; </tspan><tspan fill="#f0883e">nb_timeline_capture</tspan><tspan fill="#c9d1d9"> Record this session</tspan>
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.4;0.42;0.58;0.6;1" dur="15s" repeatCount="indefinite"/>
+      </text>
+      <text y="228" font-family="'SF Mono', 'Fira Code', Menlo, monospace" font-size="13" opacity="0" xml:space="preserve"><tspan fill="#d2a8ff">&#x276F; </tspan><tspan fill="#58a6ff">nb_checkout</tspan><tspan fill="#c9d1d9"> Switch to auth-refactor branch</tspan>
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.6;0.62;0.78;0.8;1" dur="15s" repeatCount="indefinite"/>
+      </text>
+      <text y="228" font-family="'SF Mono', 'Fira Code', Menlo, monospace" font-size="13" opacity="0" xml:space="preserve"><tspan fill="#d2a8ff">&#x276F; </tspan><tspan fill="#58a6ff">remember_insight</tspan><tspan fill="#c9d1d9"> Redis needs connection pooling</tspan>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.8;0.82;0.98;1" dur="15s" repeatCount="indefinite"/>
+      </text>
+      <rect x="0" y="244" width="7" height="12" fill="#58a6ff" opacity="0.7" rx="1">
+        <animate attributeName="opacity" values="0.7;0;0.7" dur="1.2s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <!-- RIGHT SIDE: brain/butter logo -->
+    <g transform="translate(680, 115)">
+      <text font-family="'SF Mono', 'Fira Code', Menlo, monospace" xml:space="preserve">
+<tspan x="30" dy="0"  font-size="11" fill="#f0883e" opacity="0.45">    ▄████▄</tspan>
+<tspan x="30" dy="11" font-size="11" fill="#f0883e" opacity="0.5">  ▄██▓▓▓▓██▄</tspan>
+<tspan x="30" dy="11" font-size="11" fill="#f0883e" opacity="0.55"> ██▓▓▓▓▓▓▓▓██</tspan>
+<tspan x="30" dy="11" font-size="11" fill="#f0883e" opacity="0.5"> ██▓▒▒▓▓▒▒▓██</tspan>
+<tspan x="30" dy="11" font-size="11" fill="#f0883e" opacity="0.55"> ██▓▓▓▓▓▓▓▓██</tspan>
+<tspan x="30" dy="11" font-size="11" fill="#f0883e" opacity="0.5">  ██▓▓▓▓▓▓██</tspan>
+<tspan x="30" dy="11" font-size="11" fill="#f0883e" opacity="0.45">   ▀██████▀</tspan>
+      </text>
+      <!-- Branch lines emanating from brain -->
+      <g stroke="#58a6ff" stroke-width="1" fill="none" opacity="0.3">
+        <path d="M70,90 L70,110 L50,130"/>
+        <path d="M70,90 L70,110 L90,130"/>
+        <path d="M70,90 L70,110"/>
+        <circle cx="50" cy="130" r="2.5" fill="#58a6ff"/>
+        <circle cx="90" cy="130" r="2.5" fill="#58a6ff"/>
+        <circle cx="70" cy="110" r="2.5" fill="#58a6ff"/>
+      </g>
+      <!-- MCP label -->
+      <text x="52" y="155" font-family="'SF Mono', 'Fira Code', Menlo, monospace" font-size="10" fill="#8b949e" opacity="0.6" text-anchor="middle">MCP</text>
+    </g>
+  </g>
+  <!-- Bottom accent line -->
+  <rect x="0" y="368.5" width="1280" height="1.5" fill="url(#accentLine)"/>
+</svg>
